@@ -1,3 +1,4 @@
 ✔ Fix auth bug - 2026-04-23T10:15:57.025Z
 ✔ Update README - 2026-04-23T10:16:00.797Z
 ✔ Fix auth bug - 2026-04-23T10:16:03.223Z
+✔ Refactor logic - 2026-04-23T10:16:06.065Z
