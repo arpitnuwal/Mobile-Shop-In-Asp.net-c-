@@ -35,3 +35,4 @@
 ✔ Fix auth bug - 2026-04-23T10:17:22.717Z
 ✔ Fix auth bug - 2026-04-23T10:17:24.989Z
 ✔ Add validation - 2026-04-23T10:17:27.729Z
+✔ Refactor logic - 2026-04-23T10:17:30.414Z
