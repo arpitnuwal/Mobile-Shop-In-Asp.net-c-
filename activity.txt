@@ -150,3 +150,4 @@
 ✔ Improve UI - 2026-04-23T10:51:40.633Z
 ✔ Fix auth bug - 2026-04-23T10:51:43.890Z
 ✔ Refactor logic - 2026-04-23T10:51:45.358Z
+✔ Add validation - 2026-04-23T10:51:47.715Z
