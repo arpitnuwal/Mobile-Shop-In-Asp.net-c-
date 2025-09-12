@@ -460,3 +460,4 @@
 ✔ Update README - 2026-04-23T11:03:36.485Z
 ✔ Fix auth bug - 2026-04-23T11:03:38.267Z
 ✔ Fix auth bug - 2026-04-23T11:03:40.723Z
+✔ Add validation - 2026-04-23T11:03:43.267Z
