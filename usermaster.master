@@ -1,0 +1,382 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="usermaster.master.cs" Inherits="usermaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    
+    <title><asp:ContentPlaceHolder ID="PageTitle" runat="server">Mobile Nest</asp:ContentPlaceHolder></title>
+    <meta name="description" content="<asp:ContentPlaceHolder ID='PageDescription' runat='server'>Buy latest mobiles and accessories at Mobile Nest</asp:ContentPlaceHolder>" />
+    <meta name="keywords" content="Mobile Nest, mobile phones, smartphones, Bhilwara, accessories" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Mobile Nest" />
+
+    <!-- Open Graph for social media -->
+    <meta property="og:title" content="Mobile Nest - Shop Latest Smartphones" />
+    <meta property="og:description" content="Shop the latest smartphones and accessories at Mobile Nest Bhilwara." />
+    <meta property="og:image" content="https://yourwebsite.com/images/mobilelogo.png" />
+    <meta property="og:url" content="https://yourwebsite.com/" />
+    <meta property="og:type" content="website" />
+
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet" />
+    <link href="stylesheets/cloud-zoom.css" rel="stylesheet" />
+    <link href="stylesheets/flexslider.css" rel="stylesheet" /> 
+    <link href="stylesheets/font-awesome.css" rel="stylesheet" />
+    <link href="stylesheets/jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+
+    <link href="stylesheets/mCustomScrollbar.css" rel="stylesheet" /><link href="stylesheets/owl.carousel.css" rel="stylesheet" /><link href="stylesheets/responsive.css" rel="stylesheet" /><link href="stylesheets/shortcodes.css" rel="stylesheet" /><link href="stylesheets/style.css" rel="stylesheet" /><link href="stylesheets/waves.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon"/>
+
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+
+        <div class="boxed">
+
+		<div class="overlay"></div>
+
+	
+
+		<section id="header" class="header">
+			<div class="header-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-10">
+							<ul class="flat-support">
+								<li>
+									<a href="help.aspx" title="">Support</a>
+								</li>
+								<li>
+									<a href="contact.aspx" title="">Store Locator</a>
+								</li>
+								<li>
+									<a href="myorders.aspx" title="">Track Your Order</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-4 d-none d-lg-block d-sm-block">
+							<ul class="flat-infomation">
+								<li class="phone">
+    Call Us: <a href="tel:+917878547696" title="Call Now">+91 7878547696</a>
+</li>
+
+							</ul>
+						</div>
+						<div class="col-md-4 col-2">
+							<ul class="flat-unstyled" >
+							
+										<li class="compare ">
+											<a href="myaccount.aspx" title="" >
+												<img src="images/user.png" alt="" style="width:30px;">
+											</a>
+										</li>
+							
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-middle">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<div id="logo" class="logo">
+								<a href="index.aspx" title="">
+                                    <img src="images/mobilelogo.png" />
+								</a>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="top-search">
+								<div class="form-search" accept-charset="utf-8">
+    <div class="cat-wrap">
+        <asp:DropDownList ID="ddlCategory" runat="server" name="category">
+            <asp:ListItem Value="" Text="All Category" Selected="True"></asp:ListItem>
+        </asp:DropDownList>
+        <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+    </div>
+    <div class="box-search">
+        <asp:TextBox ID="txtSearch" runat="server" name="search" placeholder="Search what you looking for ?"></asp:TextBox>
+        <span class="btn-search">
+            <asp:LinkButton ID="btnSearch" runat="server" CssClass="waves-effect" OnClick="btnSearch_Click" style="display:inline-block; padding:0; border:none; background:none;">
+                <img src="images/icons/search.png" alt="Search">
+            </asp:LinkButton>
+        </span>
+    </div>
+</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-6">
+							<div class="box-cart">
+								<div class="inner-box">
+									<ul class="menu-compare-wishlist">
+										<li class="compare">
+											<a href="cart.aspx" title="">
+												<img src="images/icons/cart.png" alt="">
+											</a>
+										</li>
+										<li class="wishlist">
+											<a href="wishlist.aspx" title="">
+												<img src="images/icons/wishlist.png" alt="">
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+                        	<div class="btn-menu style1 v2">
+	                            <span></span>
+	                        </div>
+					</div>
+				</div>
+			</div>
+			<div class="header-bottom style3">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-2">
+							
+						</div>
+						<div class="col-md-9 col-10">
+							<div class="nav-wrap">
+								<div id="mainnav" class="mainnav style3">
+									<ul class="menu">
+										<li class="column-1">
+											<a href="index.aspx" title="">Home</a>
+										</li>
+										<li class="column-1">
+											<a href="shop.aspx" title="">Shop</a>
+										</li>
+									<li class="column-1">
+    <a href="#" title="">Features</a>
+    <ul class="submenu">
+        <asp:Repeater ID="rptFeatures" runat="server">
+            <ItemTemplate>
+                <li>
+                    <a href='shop.aspx?feature=<%# Eval("FeatureID") %>' title="">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <%# Eval("FeatureName") %>
+                    </a>
+                </li>
+            </ItemTemplate>
+        </asp:Repeater>
+    </ul>
+</li>
+
+										<li class="column-1">
+                                        <a href="about.aspx" title="">About</a>
+                                            </li>
+										
+										<li class="column-1">
+											<a href="blog.aspx" title="">Blog</a>
+											</li>
+										
+                                        <li class="column-1">
+											<a href="contact.aspx" title="">Contact</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+            <footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6">
+						<div class="widget-ft widget-about">
+							<div class="logo logo-ft">
+								<a href="index.aspx" title="">
+									<img src="images/mobilelogo.png" alt="">
+								</a>
+							</div>
+							<div class="widget-content">
+								<div class="icon">
+									<img src="images/icons/call.png" alt="">
+								</div>
+								<div class="info">
+									<p class="questions">Got Questions ? Call us 24/7!</p>
+									<p  class="phone"><a href="tel:7878547696">Call Us: (+91 )7878547696</a></p>
+									<p class="address">
+										LNT Road, opp. Laxmi Narayan Temple, above sarsawati Book Stationers, Bhopal Ganj,
+Bhilwara,<br /> Rajasthan 311001
+									</p>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="widget-ft widget-categories-ft">
+    <div class="widget-title">
+        <h3>Find By Categories</h3>
+    </div>
+
+    <ul class="cat-list-ft">
+        <asp:Repeater ID="rptFooterCategories" runat="server">
+            <ItemTemplate>
+                <li>
+                    <a href='products.aspx?categoryid=<%# Eval("CategoryID") %>' title='<%# Eval("CategoryName") %>'>
+                        <%# Eval("CategoryName") %>
+                    </a>
+                </li>
+            </ItemTemplate>
+        </asp:Repeater>
+    </ul>
+</div>
+					</div>
+
+					<div class="col-lg-2 col-md-6">
+						<div class="widget-ft widget-menu">
+							<div class="widget-title">
+								<h3>Customer Care</h3>
+							</div>
+							<ul>
+								<li>
+									<a href="contact.aspx" title="">
+										Contact us
+									</a>
+								</li>
+								
+								<li>
+									<a href="myaccount.aspx" title="">
+										My Account
+									</a>
+								</li>
+								<li>
+									<a href="wishlist.aspx" title="">
+										Wish List
+									</a>
+								</li>
+								<li>
+									<a href="myorders.aspx" title="">
+										Delivery Information
+									</a>
+								</li>
+								<li>
+									<a href="policy.aspx" title="">
+										Privacy Policy
+									</a>
+								</li>
+								<li>
+									<a href="terms.aspx" title="">
+										Terms & Conditions
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="widget-ft widget-newsletter">
+							<div class="widget-title">
+								<h3>Follow us on other platform</h3>
+							</div>
+							<p>Make sure that you never miss our interesting <br />
+								news by joining our  other platform
+							</p>
+								<ul class="social-list">
+								<li>
+									<a href="https://www.facebook.com/" title="">
+										<i class="fa fa-facebook" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://x.com/" title="">
+										<i class="fa fa-twitter" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.instagram.com/?hl=en" title="">
+										<i class="fa fa-instagram" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://in.pinterest.com/" title="">
+										<i class="fa fa-pinterest" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://dribbble.com/" title="">
+										<i class="fa fa-dribbble" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.google.com/" title="">
+										<i class="fa fa-google" aria-hidden="true"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+		</footer>
+
+		<section class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p class="copyright"> All Rights Reserved © SPMPL 2025</p>
+						<p class="btn-scroll">
+							<a href="#" title="">
+								<img src="images/icons/top.png" alt="">
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+    </div>
+
+
+        <script type="text/javascript" src="javascript/jquery.min.js"></script>
+		<script type="text/javascript" src="javascript/tether.min.js"></script>
+		<script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+		<script type="text/javascript" src="javascript/waypoints.min.js"></script>
+		<script type="text/javascript" src="javascript/jquery.circlechart.js"></script>
+		<script type="text/javascript" src="javascript/easing.js"></script>
+<script type="text/javascript" src="javascript/jquery.zoom.min.js"></script>
+        <script type="text/javascript">
+            $(window).on('load', function () {
+                $('.flexslider').flexslider({
+                    animation: "slide",
+                    controlNav: "thumbnails"
+                });
+            });
+</script>
+
+
+
+		<script type="text/javascript" src="javascript/jquery.flexslider-min.js"></script>
+		<script type="text/javascript" src="javascript/owl.carousel.js"></script>
+		<script type="text/javascript" src="javascript/smoothscroll.js"></script>
+		<script type="text/javascript" src="javascript/jquery-ui.js"></script>
+		<script type="text/javascript" src="javascript/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtRmXKclfDp20TvfQnpgXSDPjut14x5wk&amp;region=GB"></script>
+	   	<script type="text/javascript" src="javascript/gmap3.min.js"></script>
+	   	<script type="text/javascript" src="javascript/waves.min.js"></script>
+		<script type="text/javascript" src="javascript/jquery.countdown.js"></script>
+
+		<script type="text/javascript" src="javascript/main.js"></script>
+    </form>
+</body>
+</html>
